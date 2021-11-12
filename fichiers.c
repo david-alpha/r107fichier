@@ -9,8 +9,9 @@ int main(){
     fichier = fopen("test.txt", "w");
     if (fichier != NULL){
 		printf("veuillez saisir le texte a decortiquer :\n ");
-		scanf("%s", &texte);
+		scanf("%[^\n]", &texte);
 		//fprintf(fichier, "%s", texte);
+		printf("\n %s \n",texte);
 		fputs(texte, fichier);
 		fclose(fichier);
     }
